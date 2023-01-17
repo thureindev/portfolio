@@ -1,0 +1,32 @@
+.title-block {
+    padding: 15vh 2vw;
+    background-color: gray;
+}
+
+.project-block {
+    padding: 5vh 0;
+    background-color: ghostwhite;
+}
+
+.social-btn {
+    /* background-color: darkslategray; */
+    color: ghostwhite;
+    padding: 2vh;
+    text-decoration: none;
+}
+.social-btn:hover {
+    /* background-color: ghostwhite; */
+    color: darkslategray
+}
+
+.social-btn-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.contact-email {
+    padding-top: 2vh;
+}
+footer {
+    padding: 2vh 0px;
+}
