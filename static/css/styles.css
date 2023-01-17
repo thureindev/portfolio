@@ -5,7 +5,15 @@
 
 .project-block {
     padding: 5vh 0;
-    background-color: ghostwhite;
+}
+
+.project-btn {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.project-btn:hover {
+    color: turquoise;
 }
 
 .social-btn {
@@ -16,7 +24,7 @@
 }
 .social-btn:hover {
     /* background-color: ghostwhite; */
-    color: darkslategray
+    color: turquoise
 }
 
 .social-btn-icon {
