@@ -545,8 +545,11 @@
 					}
 
 					ul.icons li a:before {
-						color: #ffffff;
-						text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+						/* color: #ffffff;
+						text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf; */
+					
+						color: darkslategray;
+						text-shadow: 1.25px 0px 0px ghostwhite, -1.25px 0px 0px ghostwhite, 0px 1.25px 0px ghostwhite, 0px -1.25px 0px ghostwhite;
 					}
 
 					ul.icons li a:hover:before {
