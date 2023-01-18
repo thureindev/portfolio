@@ -186,24 +186,10 @@
 		border: solid 0px #c8cccf;
 	}
 
-	@media (pointer: coarse)  {
-		/* mobile device */
+	a.email-highlight:hover {
+		padding: 0.675em 0.5em;
+		color: turquoise;
 	}
-	
-	@media (pointer: fine), (pointer: none) {
-		/* desktop */
-
-		a.email-highlight:hover {
-			padding: 0.675em 0.5em;
-			color: turquoise;
-			/* border: solid 2px #c8cccf; */
-		}
-	}
-	
-	@media (pointer: fine) and (any-pointer: coarse) {
-		/* touch desktop */
-	}
-	
 
 	strong, b {
 		color: #313f47;
