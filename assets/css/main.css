@@ -175,6 +175,10 @@
 			color: #ff7496;
 		}
 
+		.mocked-link:hover {
+			color: inherit;
+		}
+
 	p.email-highlight {
 		font-size: 0.9em;
 		text-transform: initial;
