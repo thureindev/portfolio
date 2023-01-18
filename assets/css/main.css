@@ -196,6 +196,9 @@
 	}
 
 	a.email-highlight:hover {
+		padding: 0.675em 0.5em;
+		border-radius: 4px;
+		border: solid 2px #c8cccf;
 		color: darkslategray;
 	}
 
