@@ -18,65 +18,61 @@ body {
     background-size:100vw auto;
 }
 
-    @media only screen and (max-width: 575px) {
-        body {
-            background-size:auto 100vh; 
-            /*** calculate vw and vh for portrait or landscape devices */
-            /* body background-size needs to be set for calculated height and width */
 
-        }
+@media only screen and (max-width: 575px) {
+    body {
+        background-size:auto 100vh; 
+        /*** calculate vw and vh for portrait or landscape devices */
+        /* body background-size needs to be set for calculated height and width */
+
     }
+}
 
 img {
-    /* background for loading and unloaded images */
-    background: rgb(18,177,173);
-    background: linear-gradient(132deg, rgba(18,177,173,0.22) 0%, rgba(97,133,189,0.22) 34%, rgba(75,54,214,0.22) 50%, rgba(126,37,37,0.22) 90%);
+/* background for loading and unloaded images */
+background: rgb(18,177,173);
+background: linear-gradient(132deg, rgba(18,177,173,0.22) 0%, rgba(97,133,189,0.22) 34%, rgba(75,54,214,0.22) 50%, rgba(126,37,37,0.22) 90%);
 
+transition: transform ease 0.5s;
 }
 .card {
-    
-    overflow: hidden;
-}
-img {
-    
-    transition: transform ease 0.5s;
+
+overflow: hidden;
 }
 .card:focus img,
 .card:hover img {
-        
-        transform: scale(1.5);
-}
-/* img {
     
     transform: scale(1.5);
+}
 
-} */
+
+
 /**** empty div for margin space */
 .container:first-child {
     margin-top: 30vh;
-}
-
-.profile-clock-widget {
+    }
     
-}
+    .profile-clock-widget {
+    
+    }
     .profile-clock-widget .avatar{
         height: 90px;
         width: 90px ;
         border-radius: 20px;
         margin-right: 22px;
-
+    
     }
     @media only screen and (max-width: 575px) {
         .profile-clock-widget .avatar {
             margin-right: 5vw;
         }
     }
-
+    
     .profile-clock-widget .time-temp-group {
         border-bottom: ghostwhite solid 1px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
+    
     .profile-clock-widget .time-display {
         color: beige;
         font-size: 3em;
@@ -86,7 +82,7 @@ img {
         color: #d1d1d1;
         font-size: 1.8rem;
     }
-
+    
     .profile-clock-widget .city-display {
         color: beige;
         font-size: 3em;
@@ -103,13 +99,13 @@ img {
                 font-size: 1.5em;
             }
         }
-
-
-
-.social-links-widget {
+    
+    
+    
+    .social-links-widget {
     margin-top: 22px;
-}
-
+    }
+    
     .social-links-widget .social-link {
         text-decoration: none;
         min-width: 50px;
@@ -120,55 +116,55 @@ img {
         backdrop-filter: blur(3px);
         background: rgb(131,160,176);
         background: linear-gradient(132deg, rgba(131,160,176,0.1) 0%, rgba(155,181,222,0.1) 54%, rgba(135,125,201,0.1) 100%);
-
+    
         border: 1px solid rgba(255, 255, 255, 0.2);
-
+    
         color: ghostwhite;
         
         /* height: 8vw;
         max-height: 160px;
         min-height: 140px;
         min-width: 180px; */
-
+    
         /* position: relative; */
         /* transition: transform 250ms; */
         /* width: calc(100% / 7); */
     }
-
+    
     .social-links-widget .social-link:hover {
         background: rgb(18,177,173);
         background: linear-gradient(132deg, rgba(18,177,173,0.34) 0%, rgba(155,181,222,0.34) 34%, rgba(75,54,214,0.34) 100%);
         
         color: ghostwhite;
     }
-
-
-
-@media only screen and (max-width: 767px) {
+    
+    
+    
+    @media only screen and (max-width: 767px) {
     #profile-carousel {
         margin-top: 20px;
     }
-}
-
-.carousel-item {
+    }
+    
+    .carousel-item {
     max-height: 30vh;
-
+    
     border-radius: 12px;
     border: ghostwhite solid 0px;
-}
-
-.carousel-widget {
+    }
+    
+    .carousel-widget {
     border-radius: 12px;
     overflow: hidden;
-}
+    }
         .carousel-item {
             max-height: 30vh;
         }
         
-
+    
         .carousel-item img {
             object-fit: cover;
-
+    
             /* padding-bottom: 2px; */
         }
         
@@ -179,16 +175,16 @@ img {
             }
         }    
         
-
-.section-display-header {
+    
+    .section-display-header {
     margin: 50px 0px 20px 0;
-}
-
-.featured-row {
-
-}
+    }
+    
+    .featured-row {
+    
+    }
     .featured-row .card {
-
+    
         position: relative;
         top: 0;
         transition: top ease 0.5s;
@@ -197,7 +193,7 @@ img {
         .featured-row .card:focus {
             top: -10px;
         }
-
+    
     .featured-row .card-img-overlay {
         top: auto;
     }
@@ -211,12 +207,12 @@ img {
         height: 30vh;
         object-fit: cover;
     }
-
-.categories-row {
-
-}
+    
+    .categories-row {
+    
+    }
     .categories-row .card {
-
+    
         position: relative;
         top: 0;
         transition: top ease 0.5s;
@@ -238,12 +234,12 @@ img {
         height: 20vh;
         object-fit: cover;
     }
-
-.specials-row {
     
-}
+    .specials-row {
+    
+    }
     .specials-row .card {
-
+    
         position: relative;
         top: 0;
         transition: top ease 0.5s;
@@ -261,23 +257,23 @@ img {
             height: 60vh;
         }
     }
-
-/*
+    
+    /*
     Bootstrp grid column sizes
     ------------------------------
     Xsmall  Small   Medium   Large      Xlarge
     <576px  ≥576px  ≥768px   ≥992px     ≥1200px
-*/
-@media only screen and (max-width: 767px) {
+    */
+    @media only screen and (max-width: 767px) {
     .specials-row-header {
         margin-bottom: 0px;
     }
     .specials-row .card {
         margin-top: 20px;
     }
-}
-
-@media only screen and (max-width: 991px) {
+    }
+    
+    @media only screen and (max-width: 991px) {
     
     .featured-row-header {
         margin-bottom: 0px;
@@ -285,17 +281,17 @@ img {
     .featured-row .card {
         margin-top: 20px;
     }
-
+    
     .categories-row-header {
         margin-bottom: 0px;
     }
     .categories-row .card {
         margin-top: 20px;
     }
-}
-
-
-footer {
+    }
+    
+    
+    footer {
     /* position: fixed; */
     width: 100%;
     left: 0;
@@ -304,22 +300,22 @@ footer {
     /* background-color: red; */
     color: white;
     text-align: center;
-}
-
-
-/* BOX SHADOW DECO ***** MATERIAL DESIGN  */
-/* -------------------------------*/
-
-/* applike subtle box shadow */
-/* 
+    }
+    
+    
+    /* BOX SHADOW DECO ***** MATERIAL DESIGN  */
+    /* -------------------------------*/
+    
+    /* applike subtle box shadow */
+    /* 
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-*/
-.section-display-header {
+    */
+    .section-display-header {
     /* material design text-shadow level 3 & 4 */
     text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
     
-}
-.widget {
+    }
+    .widget {
     /* material design box-shadow level 2 */
     /* text-shadow: 2px 3px 6px rgba(0,0,0,0.16), 2px 3px 6px rgba(0,0,0,0.23); */
     /* material design text-shadow level 3 & 4 */
@@ -328,53 +324,53 @@ footer {
     box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
     /* material design box-shadow level 2 */
     box-shadow: 2px 3px 6px rgba(0,0,0,0.16), 2px 3px 6px rgba(0,0,0,0.23);
-}
-.card {
+    }
+    .card {
     /* material design box-shadow level 6 */
     box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
-}
-.social-link {
+    }
+    .social-link {
     /* material design box-shadow level 2 */
     box-shadow: 2px 3px 6px rgba(0,0,0,0.16), 2px 3px 6px rgba(0,0,0,0.23);
-}
-.profile-clock-widget .avatar {
+    }
+    .profile-clock-widget .avatar {
     /* material design box-shadow level 2 */
     box-shadow: 2px 3px 6px rgba(0,0,0,0.16), 2px 3px 6px rgba(0,0,0,0.23);
-}
-
-.profile-clock-widget {
+    }
+    
+    .profile-clock-widget {
     box-shadow: none;
-}
-.social-links-widget {
+    }
+    .social-links-widget {
     box-shadow: none;
     text-shadow: none;
-}
-/* -------------------------------*/
-
-.container {
+    }
+    /* -------------------------------*/
+    
+    .container {
     max-width: 1190px;
-}
-
-.featured-row .card {
+    }
+    
+    .featured-row .card {
     max-width: 285px;
     max-height: 191px;
-}
-
-.categories-row .card {
+    }
+    
+    .categories-row .card {
     max-width: 185px;
     /* max-width: 180px; */
     max-height: 140px;
-}
-
-.specials-row .card {
+    }
+    
+    .specials-row .card {
     max-width: 285px;
     max-height: 546px;
-}
-
-.profile-clock-banner {
+    }
+    
+    .profile-clock-banner {
     max-height: 180px;
-
-}
-.carousel-item {
+    
+    }
+    .carousel-item {
     max-height: 180px;
-}
+    }
