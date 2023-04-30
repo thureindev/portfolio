@@ -1,0 +1,51 @@
+.date-location-group {
+    overflow: hidden;
+}
+.date-group {
+    border-bottom: solid 2px ghostwhite;
+}
+.location-group {
+    overflow: hidden;
+}
+.day-month-text {
+
+    font-family: 'Roboto Condensed';
+    font-size: 1.65em;
+}
+.weekday-text {
+
+    font-family: 'Arial';
+    font-size: 1.2em;
+}
+
+.city-text {
+
+    font-family: 'Roboto Condensed';
+    font-size: 1.65em;
+}
+.country-text {
+
+    font-family: 'Arial';
+    font-size: 1em;
+}
+
+.digital-time-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+.digital-time-text {
+    font-family: 'Roboto Condensed';
+    font-size: 3.6em;
+}
+
+
+
+.mock-clock-group {
+
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+}
