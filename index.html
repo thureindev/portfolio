@@ -389,11 +389,22 @@
     <script>
 
         const container = document.querySelector('.slides-container');
+        const gridWrapper = document.querySelector('.grid-wrapper');
 
         const bodyhtml = document.querySelector('body');
 
   
         bodyhtml.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            container.scrollBy({
+                top: 0,
+                left: e.deltaY > 0 ? 100 : -100,
+                behavior: 'smooth'
+            });
+        });
+
+        gridWrapper.addEventListener('wheel', (e) => {
             e.preventDefault();
 
             container.scrollBy({
