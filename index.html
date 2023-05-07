@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 
-    <link rel="stylesheet" href="./styles/main-style.css">
+    <!-- <link rel="stylesheet" href="./styles/main-style.css">
     <link rel="stylesheet" href="./styles/slider.css">
     <link rel="stylesheet" href="./styles/clock.css">
     <link rel="stylesheet" href="./styles/widget-styles.css">
-    <link rel="stylesheet" href="./styles/special-styles.css">
+    <link rel="stylesheet" href="./styles/special-styles.css"> -->
+
+    
+    <link rel="stylesheet" href="./css/main.css">
 
     <script src="https://kit.fontawesome.com/fd02c3c8a3.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,13 +41,13 @@
 
     <div class="main-screen-container">
         
-        <div class="app-menu-container slider row">
+        <div class="app-menu-container slider">
 
             <div class="slides-container">
 
-                <div id="slide-1" class="slide">
+                <div id="home" class="slide grid-wrapper homescreen">
 
-                    <div class="col s4 widget-container lg">
+                    <div class="grid-item widget-container lg profile">
                         
                         <!-- <div class="slides"> -->
 
@@ -56,7 +59,7 @@
                                 </div>
                             </div>
                             
-                            <!-- <div class="widget lg intense-blur" id="profile-slide-2">
+                            <!-- <div class="widget lg opaque_blur" id="profile-slide-2">
                                 <div class="profile-text-group">
 
                                     <span class="profile-title">thureindev</span>
@@ -71,10 +74,10 @@
                         <!-- </div> -->
 
                     </div>
-    
-                    <div class="col s2 widget-container sm">
+
+                    <div class="grid-item widget-container sm clock">
                         <!-- <img class="widget sm"/> -->
-    
+
                         <div class="clock-wrapper widget sm">
                             <ul id="clock">
                                 <li id="second"></li>
@@ -84,27 +87,27 @@
         
                     
                     </div>
-    
-                    <div class="col s2 widget-container sm">
+
+                    <div class="grid-item widget-container sm orchid">
                         <img class="widget sm" src="./images/t_nandar_purple_orchid.jpg"/>
                     </div>
                     
-                    <div class="col s2 app-container">
+                    <div class="grid-item app-container">
                         <a href="https://www.linkedin.com/in/thurein-d-6842bb23a" target="_blank">
                             <img class="app-icon" src="./images/linkedin.jpg"/>
                             <div class="app-label">LinkedIn</div>
                         </a>
                     </div>
-    
-                    <div class="col s2 app-container">
+
+                    <div class="grid-item app-container">
                         <a href="https://github.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/github.jpg"/>
                             <div class="app-label">GitHub</div>
                         </a>
                     </div>
-    
-                    <div class="col s4 widget-container md">
-                        <div class="widget md intense-blur">
+
+                    <div class="grid-item widget-container md calender">
+                        <div class="widget md opaque_blur">
 
                             <span class="date-location-group col s6">
                                 
@@ -123,195 +126,222 @@
                             </span>
                         </div>
                     </div>
-    
-                    <div class="col s2 app-container">
-                        <a href="https://www.instagram.com/thureintun_" target="_blank">
+
+                    <a class="grid-item app-container" href="https://www.instagram.com/thureintun_" target="_blank">
                             <img class="app-icon" src="./images/Instagram_logo_2016.svg"/>
                             <div class="app-label">Instagram</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://twitter.com/thureindev" target="_blank">
+                    </a>
+                    <a class="grid-item app-container" href="https://twitter.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/twitter.jpg"/>
                             <div class="app-label">Twitter</div>
-                        </a>
-                    </div>
-    
-    
-                    
-  
-                    <div class="col s6 row">
-                        <a href="https://thureindev.github.io/Chess-Clock" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Chess Clock</div>
-                        </a>
-                        <a href="https://thureindev.github.io/Tipsy-Tavern" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Tipsy Tavern</div>
-                        </a>
-                        <a href="https://www.nandarblender.com" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">T_Nandar</div>
-                        </a>
-                        <a href="#" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">App</div>
-                        </a>
-    
-                        <a href="#" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">App</div>
-                        </a>
-                        <a href="#" class="col s4 app-container" target="blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">App</div>
-                        </a>
- 
-                    </div>
+                    </a>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Chess-Clock" target="_blank">
+                        <img class="app-icon" src="./images/chessclock.png"/>
+                        <div class="app-label">Chess Clock</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
+                        <div class="app-icon"></div>
+                        <div class="app-label">Tipsy Tavern</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://www.nandarblender.com" target="_blank">
+                        <div class="app-icon"></div>
+                        <div class="app-label">T_Nandar</div>
+                    </a>
+                    <a class="grid-item app-container" href="#" target="_blank">
+                        <div class="app-icon"></div>
+                        <div class="app-label">App</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="#" target="_blank">
+                        <div class="app-icon"></div>
+                        <div class="app-label">App</div>
+                    </a>
+                    <a class="grid-item app-container" href="#" target="_blank">
+                        <div class="app-icon"></div>
+                        <div class="app-label">App</div>
+                    </a>
 
                 </div>
 
-                <div id="slide-2" class="slide">
+                <div id="games" class="slide grid-wrapper">
                     
-                    <div class="col s2 app-container">
+                    <a class="grid-item app-container" href="https://www.linkedin.com/in/thurein-d-6842bb23a" target="_blank">
+                            <img class="app-icon" src="./images/linkedin.jpg"/>
+                            <div class="app-label">LinkedIn</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="https://github.com/thureindev" target="_blank">
+                            <img class="app-icon" src="./images/github.jpg"/>
+                            <div class="app-label">GitHub</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="https://www.instagram.com/thureintun_" target="_blank">
+                            <img class="app-icon" src="./images/Instagram_logo_2016.svg"/>
+                            <div class="app-label">Instagram</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://twitter.com/thureindev" target="_blank">
+                            <img class="app-icon" src="./images/twitter.jpg"/>
+                            <div class="app-label">Twitter</div>
+                    </a>
+
+                    
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Chess-Clock" target="_blank">
+                            <img class="app-icon" src="./images/chessclock.png"/>
+                            <div class="app-label">Chess Clock</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">Tipsy Tavern</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://www.nandarblender.com" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">T_Nandar</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+                    
+                    
+                    <div class="grid-item app-container">
                         <a href="https://www.linkedin.com/in/thurein-d-6842bb23a" target="_blank">
                             <img class="app-icon" src="./images/linkedin.jpg"/>
                             <div class="app-label">LinkedIn</div>
                         </a>
                     </div>
-    
-                    <div class="col s2 app-container">
+
+                    <div class="grid-item app-container">
                         <a href="https://github.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/github.jpg"/>
                             <div class="app-label">GitHub</div>
                         </a>
                     </div>
-    
-                    <div class="col s2 app-container">
-                        <a href="https://www.instagram.com/thureintun_" target="_blank">
+
+                    <a class="grid-item app-container" href="https://www.instagram.com/thureintun_" target="_blank">
                             <img class="app-icon" src="./images/Instagram_logo_2016.svg"/>
                             <div class="app-label">Instagram</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://twitter.com/thureindev" target="_blank">
+                    </a>
+                    <a class="grid-item app-container" href="https://twitter.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/twitter.jpg"/>
                             <div class="app-label">Twitter</div>
-                        </a>
-                    </div>
-    
-                    
-                    <div class="col s2 app-container">
-                        <a href="https://thureindev.github.io/Chess-Clock" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Chess Clock</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Tipsy Tavern</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://www.nandarblender.com" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">T_Nandar</div>
-                        </a>
-                    </div>
+                    </a>
 
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
-                            <div class="app-label">App</div>
-                        </a>
-                    </div>
                     
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Chess-Clock" target="_blank">
+                            <img class="app-icon" src="./images/chessclock.png"/>
+                            <div class="app-label">Chess Clock</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">Tipsy Tavern</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://www.nandarblender.com" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">T_Nandar</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
                             <div class="app-label">App</div>
-                        </a>
-                    </div>
+                    </a>
                     
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
                             <div class="app-label">App</div>
-                        </a>
-                    </div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+
+                    
+                    <a class="grid-item app-container" href="https://www.nandarblender.com" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">T_Nandar</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
 
                 </div>
 
-                <div id="slide-3" class="slide">
+                <div id="tools" class="slide grid-wrapper">
                     
-                    <div class="col s2 app-container">
+                    <div class="grid-item app-container">
                         <a href="https://www.linkedin.com/in/thurein-d-6842bb23a" target="_blank">
                             <img class="app-icon" src="./images/linkedin.jpg"/>
                             <div class="app-label">LinkedIn</div>
                         </a>
                     </div>
-    
-                    <div class="col s2 app-container">
+
+                    <div class="grid-item app-container">
                         <a href="https://github.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/github.jpg"/>
                             <div class="app-label">GitHub</div>
                         </a>
                     </div>
-    
-                    <div class="col s2 app-container">
-                        <a href="https://www.instagram.com/thureintun_" target="_blank">
+
+                    <a class="grid-item app-container" href="https://www.instagram.com/thureintun_" target="_blank">
                             <img class="app-icon" src="./images/Instagram_logo_2016.svg"/>
                             <div class="app-label">Instagram</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://twitter.com/thureindev" target="_blank">
+                    </a>
+                    <a class="grid-item app-container" href="https://twitter.com/thureindev" target="_blank">
                             <img class="app-icon" src="./images/twitter.jpg"/>
                             <div class="app-label">Twitter</div>
-                        </a>
-                    </div>
-    
-                    
-                    <div class="col s2 app-container">
-                        <a href="https://thureindev.github.io/Chess-Clock" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Chess Clock</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">Tipsy Tavern</div>
-                        </a>
-                    </div>
-                    <div class="col s2 app-container">
-                        <a href="https://www.nandarblender.com" target="_blank">
-                            <div class="app-icon"></div>
-                            <div class="app-label">T_Nandar</div>
-                        </a>
-                    </div>
+                    </a>
 
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
-                            <div class="app-label">App</div>
-                        </a>
-                    </div>
                     
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Chess-Clock" target="_blank">
+                            <img class="app-icon" src="./images/chessclock.png"/>
+                            <div class="app-label">Chess Clock</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://thureindev.github.io/Tipsy-Tavern" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">Tipsy Tavern</div>
+                    </a>
+                    <a class="grid-item app-container" href="https://www.nandarblender.com" target="_blank">
+                            <img class="app-icon"/>
+                            <div class="app-label">T_Nandar</div>
+                    </a>
+
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
                             <div class="app-label">App</div>
-                        </a>
-                    </div>
+                    </a>
                     
-                    <div class="col s2 app-container">
-                        <a href="#">
-                            <div class="app-icon"></div>
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
                             <div class="app-label">App</div>
-                        </a>
-                    </div>
+                    </a>
+                    
+                    <a class="grid-item app-container" href="#">
+                            <img class="app-icon"/>
+                            <div class="app-label">App</div>
+                    </a>
                 </div>
 
             </div>
@@ -319,19 +349,20 @@
         </div>
 
         <div class="dockbar-container">
-            <div class="dockbar intense-blur">
-                <a href="#slide-1" class="dockbar-item">
+            <div class="dockbar opaque_blur">
+                <a href="#home" class="dockbar-item">
                     <img src="./images/home_white_48dp.svg" alt="">
                 </a>
-                <a href="#slide-2" class="dockbar-item">
+                <a href="#games" class="dockbar-item">
                     <img src="./images/shower_white_48dp.svg" alt="">
                 </a>
-                <a href="#slide-3" class="dockbar-item">
+                <a href="#tools" class="dockbar-item">
                     <img src="./images/grass_white_48dp.svg" alt="">
                 </a>
             </div>
             <!-- <img src="./images/dockbar.jpg" alt=""> -->
         </div>
+
     </div>
 
     <!-- partial:index.partial.html -->

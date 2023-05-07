@@ -1,0 +1,91 @@
+@use 'vars';
+
+
+// .dockbar-container {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: vars.$bot_margin;
+
+//     height: 10vh;
+//     width: 90vw;
+//     max-height: vars.$max_height_dockbar;
+//     max-width: vars.$max_width_dockbar;
+
+//     margin: 0 auto;
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.dockbar {
+    height: 100%;
+    width: auto;
+
+    margin: 0;
+    padding: 5px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: vars.$border_curve_slight;
+    
+    -webkit-box-shadow: vars.$box_shadow_level_1;
+    -moz-box-shadow: vars.$box_shadow_level_1;
+    box-shadow: vars.$box_shadow_level_1;
+
+    background-color: vars.$dockbar_bg_color;
+    backdrop-filter: vars.$normal_blur;
+}
+
+.dockbar-item {
+    height: vars.$dockitem_length;
+    width: vars.$dockitem_length;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) {
+        max-width: vars.$small_dockitem_length;
+        max-height: vars.$small_dockitem_length;
+    }
+    @media screen and (min-device-width: vars.$laptop_breakpoint) {
+        width: vars.$large_dockitem_length;
+        height: vars.$large_dockitem_length;
+    }
+    
+    margin: 0 5px;
+    padding: 0;
+    
+    /* background-color: bisque; */
+
+    border-radius: vars.$border_curve_slight;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform ease 0.5s, top ease 0.5s, margin ease 0.5s, box-shadow ease 0.5s;
+    
+    transform: scale(1);
+    position: relative;
+    top: 0;
+}
+.dockbar-item:hover {
+    transform: scale(1.2);
+    top: -15px;
+    margin: 0 15px;
+}
+
+.dockbar-item:first-child:hover {
+    margin: 0 15px 0 20px;
+}
+.dockbar-item:last-child:hover {
+    margin: 0 20px 0 15px;
+}
+
+.dockbar-item img {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+}
