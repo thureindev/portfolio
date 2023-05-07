@@ -402,6 +402,16 @@
                 behavior: 'smooth'
             });
         });
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+
+            container.scrollBy({
+                top: 0,
+                left: e.deltaY > 0 ? 100 : -100,
+                behavior: 'smooth'
+            });
+        });
  
 
     </script>
