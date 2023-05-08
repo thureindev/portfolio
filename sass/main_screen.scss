@@ -20,6 +20,17 @@
     align-items: center;
     flex-direction: column;
 }
+.mobile-screen {
+    height: 100%;
+    background-color: peru;
+
+}
+.tablet-screen {
+    height: 80vh;
+    top: 20vh;
+    background-color: palegreen;
+}
+
 
 .app-menu-container {
 
@@ -29,8 +40,6 @@
     // max-width: vars.$max_width_app_menu;
 
     margin: 0 auto;
-
-    overflow: hidden;
 }
 
 .dockbar-container {
@@ -47,10 +56,10 @@
     align-items: center;
 }
 
-.page-container {
-    margin: 0 auto;
+// .page-container {
+//     margin: 0 auto;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }

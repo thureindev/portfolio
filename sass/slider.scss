@@ -12,9 +12,9 @@
     
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-top: 10px;
 
     white-space: nowrap;
-
     scroll-snap-type: x mandatory;
     
     
@@ -24,13 +24,13 @@
 }
 
 .slides-container::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 0px;
+    height: 0px;
     // background: transparent;
 }
 .slides-container::-webkit-scrollbar-thumb {
     background: transparent;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 .slides-container::-webkit-scrollbar-track {
     background: transparent;

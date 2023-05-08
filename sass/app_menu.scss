@@ -18,17 +18,11 @@
 .app-container, .widget-container {
 
     /* background-color: lightpink; */
-
-    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     height: 20vh;
-    
-    -webkit-text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    -moz-text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .app-container a {
@@ -43,29 +37,24 @@
     .app-icon {
         width: 10vh;
         height: 10vh;
+
+        @media screen and (orientation: portrait) {
+            width: 15vw;
+            height: 15vw;
+        }
     
-        border-radius: 12px;
-    
-        /* background-color: beige; */
-        /* background-image:url('./images/avatar.jpg'); */
-        background-repeat:no-repeat;
-        background-position:center;
-        background-size:100%;
+        border-radius: vars.$border_curve_slight;
         
         display: flex;
         align-items: center;
         justify-content: center;
-    
         overflow:hidden;
     
-        /* border: solid 2px #666; */
-    
-        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        -webkit-box-shadow: vars.$box_shadow_level_1;
+        -moz-box-shadow: vars.$box_shadow_level_1;
+        box-shadow: vars.$box_shadow_level_1;
         
-        backdrop-filter: blur(10px);
-    
+        backdrop-filter: vars.$normal_blur;
     }
     
     .app-label {

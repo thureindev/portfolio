@@ -566,6 +566,20 @@
 
     <!-- <script  src="./main.js" type="text/javascript"></script> -->
 
+	<script>
+        const main_screen = document.querySelector('.main-screen-container');
+        console.log(navigator.userAgent)
+
+		if (/Mobi|Android|iPhone|i(Pad|Pod)/i.test(navigator.userAgent)) {
+			// add class to body if user is on a mobile device
+			main_screen.classList.add('mobile-screen');
+		}
+        else {
+			// add class to body if user is on a desktop device
+		    main_screen.classList.add('desktop');
+		}
+	</script>
+
     <script>
 
         const container = document.querySelector('.slides-container');
