@@ -1,24 +1,5 @@
 @use 'vars';
 
-
-// .dockbar-container {
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     bottom: vars.$bot_margin;
-
-//     height: 10vh;
-//     width: 90vw;
-//     max-height: vars.$max_height_dockbar;
-//     max-width: vars.$max_width_dockbar;
-
-//     margin: 0 auto;
-
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
 .dockbar {
     height: 100%;
     width: auto;
@@ -41,16 +22,20 @@
 }
 
 .dockbar-item {
-    height: vars.$dockitem_length;
-    width: vars.$dockitem_length;
+    height: 90%;
+    width: auto;
+
+    max-height: vars.$dockitem_length;
+    max-width: vars.$dockitem_length;
+
     
     @media screen and (max-device-width: vars.$tablet_breakpoint) {
         max-width: vars.$small_dockitem_length;
         max-height: vars.$small_dockitem_length;
     }
     @media screen and (min-device-width: vars.$laptop_breakpoint) {
-        width: vars.$large_dockitem_length;
-        height: vars.$large_dockitem_length;
+        max-width: vars.$large_dockitem_length;
+        max-height: vars.$large_dockitem_length;
     }
     
     margin: 0 5px;
@@ -72,16 +57,16 @@
 }
 .dockbar-item:hover {
     transform: scale(1.2);
-    top: -15px;
-    margin: 0 15px;
+    top: -10px;
+    // margin: 0 5px;
 }
 
-.dockbar-item:first-child:hover {
-    margin: 0 15px 0 20px;
-}
-.dockbar-item:last-child:hover {
-    margin: 0 20px 0 15px;
-}
+// .dockbar-item:first-child:hover {
+//     margin: 0 5px 0 10px;
+// }
+// .dockbar-item:last-child:hover {
+//     margin: 0 10px 0 5px;
+// }
 
 .dockbar-item img {
     width: 100%;

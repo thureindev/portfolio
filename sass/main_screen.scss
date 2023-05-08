@@ -13,22 +13,16 @@
     // max-width: vars.$max_width_app_menu;
 
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
+// to solve disturbing mobile browser tab bar
 .mobile-screen {
     height: 100%;
-    background-color: peru;
-
-}
-.tablet-screen {
-    height: 80vh;
-    top: 20vh;
-    background-color: palegreen;
 }
 
 
@@ -55,11 +49,3 @@
     justify-content: center;
     align-items: center;
 }
-
-// .page-container {
-//     margin: 0 auto;
-    
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }

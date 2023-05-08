@@ -25,7 +25,7 @@ $max_width_dockbar: 1200px;
 /* APP ICON MEASUREMENTS */
 $small_icon_length: 50px;
 $icon_length: 75px;
-$large_icon_length: 100px;
+$large_icon_length: 80px;
 
 $small_dockitem_length: 45px;
 $dockitem_length: 65px;
@@ -36,6 +36,8 @@ $mobile_breakpoint: 480px;
 $tablet_breakpoint: 768px;
 $laptop_breakpoint: 1024px;
 $large_screen_breakpoint: 1200px;
+
+$landscape_height_breakpoint: 768px;
 
 @media screen and (max-device-width: $mobile_breakpoint) {
 

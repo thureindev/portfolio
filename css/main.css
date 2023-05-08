@@ -268,12 +268,12 @@ img {
 }
 
 .slider {
-  height: max-content;
-  width: max-content;
   overflow: hidden;
 }
 
 .slides-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -299,8 +299,8 @@ img {
 }
 
 .slide {
-  height: 80vh;
-  width: 90vw;
+  height: 100%;
+  width: 100%;
   scroll-snap-align: start;
   flex-shrink: 0;
   /* width: 300px;
@@ -315,6 +315,89 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.widget-container {
+  /* background-color: lightpink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.widget {
+  width: 90%;
+  height: 90%;
+}
+
+.widget {
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  backdrop-filter: blur(21px);
+  transition: transform ease 0.5s;
+}
+
+.widget:hover {
+  transform: scale(1.05);
+}
+
+.widget .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-overlay-wrapper {
+  position: relative;
+}
+
+.img-overlay-text {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.img-overlay-text .photo-title {
+  display: block;
+  font-family: "Roboto Condensed";
+  font-size: 1.65em;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* font-weight: 600; */
+}
+
+.img-overlay-text .photo-date {
+  display: block;
+}
+
+.profile-text-group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.profile-text-group .profile-title {
+  font-family: "Roboto Condensed";
+  font-size: 2.65rem;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* font-weight: 600; */
+}
+
+.profile-text-group .profile-subtitle {
+  margin: 0 10px;
+  font-size: 1.65rem;
+  white-space: normal;
+}
+
+.profile-text-group .profile-description {
+  white-space: normal;
 }
 
 .date-location-group {
@@ -367,12 +450,11 @@ img {
   justify-content: right;
 }
 
-.app-container, .widget-container {
+.app-container {
   /* background-color: lightpink; */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20vh;
 }
 
 .app-container a {
@@ -384,28 +466,41 @@ img {
   flex-direction: column;
 }
 .app-container a .app-icon {
-  width: 10vh;
-  height: 10vh;
+  height: 75px;
+  width: 75px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   backdrop-filter: blur(10px);
 }
-@media screen and (orientation: portrait) {
+@media screen and (max-device-width: 768px) {
   .app-container a .app-icon {
-    width: 15vw;
-    height: 15vw;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-device-width: 1024px) {
+  .app-container a .app-icon {
+    width: 80px;
+    height: 80px;
   }
 }
 .app-container a .app-label {
   text-align: center;
   color: ghostwhite;
-  margin-top: 10px;
+  padding-top: 5px;
+  font-size: smaller;
+}
+@media screen and (min-device-height: 768px) {
+  .app-container a .app-label {
+    padding-top: 10px;
+    font-size: inherit;
+  }
 }
 .app-container a .app-icon, .app-container a .app-label {
   transition: top ease 0.5s;
@@ -415,129 +510,6 @@ img {
 
 .app-container a:hover .app-icon, .app-container a:hover .app-label {
   top: -10px;
-}
-
-.widget {
-  border-radius: 12px;
-  /* background-color: beige; */
-  /* background-image:url('./images/avatar.jpg'); */
-  /* background-repeat:no-repeat;
-  background-position:center;
-  background-size:100%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  /* border: solid 12px green; */
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  backdrop-filter: blur(10px);
-  transition: top ease 0.5s;
-  position: relative;
-  top: 0;
-}
-
-.widget:hover {
-  top: -10px;
-}
-
-.widget-container.sm {
-  height: 20vh;
-}
-
-.widget-container.md {
-  height: 20vh;
-}
-
-.widget-container.lg {
-  height: 40vh;
-}
-
-.widget-container .widget.sm {
-  /* width: 100%;
-  height: 90%; */
-  height: 18vh;
-  width: 18vh;
-}
-
-.widget-container .widget.md {
-  /* width: 100%;
-  height: 90%; */
-  height: 18vh;
-  width: 28vw;
-}
-
-.widget-container .widget.lg {
-  /* width: 100%;
-  height: 95%; */
-  max-height: 38vh;
-  width: 28vw;
-}
-
-.widget .photo {
-  /* position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
-  width: 100%;
-  height: 120%;
-  object-fit: cover;
-}
-
-.img-overlay-wrapper {
-  position: relative;
-}
-
-.img-overlay-text {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-}
-
-.img-overlay-text .photo-title {
-  display: block;
-  font-family: "Roboto Condensed";
-  font-size: 1.65em;
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  /* font-weight: 600; */
-}
-
-.img-overlay-text .photo-date {
-  display: block;
-}
-
-.profile-text-group {
-  /* position: absolute; 
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px; */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.profile-text-group .profile-title {
-  font-family: "Roboto Condensed";
-  font-size: 2.65rem;
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  /* font-weight: 600; */
-}
-
-.profile-text-group .profile-subtitle {
-  margin: 0 10px;
-  font-size: 1.65rem;
-  white-space: normal;
-}
-
-.profile-text-group .profile-description {
-  white-space: normal;
 }
 
 .dockbar {
@@ -557,8 +529,10 @@ img {
 }
 
 .dockbar-item {
-  height: 65px;
-  width: 65px;
+  height: 90%;
+  width: auto;
+  max-height: 65px;
+  max-width: 65px;
   margin: 0 5px;
   padding: 0;
   /* background-color: bisque; */
@@ -579,23 +553,14 @@ img {
 }
 @media screen and (min-device-width: 1024px) {
   .dockbar-item {
-    width: 75px;
-    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
   }
 }
 
 .dockbar-item:hover {
   transform: scale(1.2);
-  top: -15px;
-  margin: 0 15px;
-}
-
-.dockbar-item:first-child:hover {
-  margin: 0 15px 0 20px;
-}
-
-.dockbar-item:last-child:hover {
-  margin: 0 20px 0 15px;
+  top: -10px;
 }
 
 .dockbar-item img {
@@ -613,7 +578,7 @@ img {
   height: 100vh;
   width: 90vw;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -622,13 +587,6 @@ img {
 
 .mobile-screen {
   height: 100%;
-  background-color: peru;
-}
-
-.tablet-screen {
-  height: 80vh;
-  top: 20vh;
-  background-color: palegreen;
 }
 
 .app-menu-container {
@@ -646,20 +604,35 @@ img {
   align-items: center;
 }
 
+.hide-in-portrait {
+  display: inline-flex;
+}
+
+.show-in-portrait {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  .hide-in-portrait {
+    display: none;
+  }
+  .show-in-portrait {
+    display: inline-flex;
+  }
+}
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0;
-  -webkit-overflow-scrolling: touch;
 }
-
 @media screen and (orientation: portrait) {
   .grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
 }
+
 .profile {
   grid-area: profile;
 }
@@ -681,11 +654,9 @@ img {
   gap: 0;
   grid-template-areas: "profile profile clock orchid . ." "profile profile calender calender . ." ". . . . . ." ". . . . . .";
 }
-
 @media screen and (orientation: portrait) {
-  .grid-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+  .grid-wrapper.homescreen {
+    grid-template-areas: "profile profile orchid orchid" "profile profile orchid orchid" "calender calender calender calender" "calender calender calender calender" "clock clock . ." "clock clock . .";
   }
 }
 
