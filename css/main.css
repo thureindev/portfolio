@@ -583,8 +583,8 @@ img {
 }
 @media screen and (min-device-width: 1024px) {
   .dockbar-item {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
   }
 }
 
