@@ -373,14 +373,21 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 20vh;
   -webkit-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.app-icon {
+.app-container a {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.app-container a .app-icon {
   width: 10vh;
   height: 10vh;
   border-radius: 12px;
@@ -398,27 +405,19 @@ img {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   backdrop-filter: blur(10px);
-  transition: top ease 0.5s;
-  position: relative;
-  top: 0;
 }
-
-.app-icon:hover {
-  top: -10px;
-}
-
-.app-label {
+.app-container a .app-label {
   text-align: center;
-  color: white;
+  color: ghostwhite;
   margin-top: 10px;
-  padding: 0 5px;
-  border-radius: 5px;
+}
+.app-container a .app-icon, .app-container a .app-label {
   transition: top ease 0.5s;
   position: relative;
   top: 0;
 }
 
-.app-icon:hover + .app-label {
+.app-container a:hover .app-icon, .app-container a:hover .app-label {
   top: -10px;
 }
 
@@ -653,6 +652,7 @@ img {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (orientation: portrait) {
