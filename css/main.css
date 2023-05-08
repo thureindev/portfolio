@@ -281,7 +281,6 @@ img {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  overflow: hidden;
 }
 
 .slides-container::-webkit-scrollbar {
@@ -290,7 +289,7 @@ img {
 }
 
 .slides-container::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: transparent;
   border-radius: 10px;
 }
 
