@@ -9,6 +9,8 @@
 }
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -34,68 +36,125 @@ img {
 }
 
 /* clock */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .clock-wrapper {
+  position: relative;
+  width: 100%;
+  /* set any background color to visualize the irregular shape */
+  background-color: #ddd !important;
+  /* set the padding-top based on the desired width:height ratio */
+  padding-top: 0%;
   /* height: 100vh;
   width: 100%; */
   /* height: 100%;
   width: 100%; */
   /* background-color: blueviolet; */
-  float: left;
   /* background: midnightblue; */
   /* border-radius: 50%; */
 }
 
-#clock {
-  /* width: 280px;
-  height: 280px; */
+.clock {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  /* background: #25283d; */
-  /* border: 18px solid black; */
-  background-color: rgba(148, 148, 148, 0);
+  background-color: #323232;
   backdrop-filter: blur(10px);
   border: 5px solid ghostwhite;
   border-radius: 50%;
-  margin: 100px auto;
+  margin: auto;
   position: relative;
 }
 
-#clock:before {
+.clock:before {
   content: "";
   position: absolute;
   /* width: 280px;
   height: 280px; */
   width: 100%;
   height: 100%;
-  left: -18px;
-  top: -10px;
+  left: 0;
+  top: 0;
   /* border: 18px solid #cccccc; */
   border-radius: 50%;
   z-index: -2;
 }
 
-#clock:after {
+.clock:after {
   content: "";
   width: 18px;
   height: 18px;
-  /* background: #c7d8f8; */
-  background: ghostwhite;
+  background: grey;
   position: absolute;
   border-radius: 50%;
   left: calc(50% - 9px);
   top: calc(50% - 9px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1490196078);
-  text-shadow: 0 5px 18px rgba(35, 28, 255, 0.7607843137), 0 2px 3px rgba(56, 83, 255, 0.631372549);
 }
 
-#clock li {
+.clock li {
   list-style-type: none;
   position: absolute;
+}
+
+.second-hand {
+  width: 100%;
+  height: 100%;
+  animation: sec 60s steps(60, end) infinite;
+}
+
+.second-hand:after {
+  content: "";
+  width: 4px;
+  height: 42%;
+  border-radius: 2px;
+  /* background: red; */
+  background: ghostwhite;
+  position: absolute;
+  left: calc(50% - 2px);
+  top: 12%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1490196078);
+}
+
+@keyframes sec {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.minute-hand {
+  width: 100%;
+  height: 100%;
+  animation: sec 3600s steps(60, end) infinite;
+}
+
+.minute-hand:after {
+  content: "";
+  width: 8px;
+  height: 79px;
+  border-radius: 4px 4px 2px 2px;
+  background: gray;
+  position: absolute;
+  left: calc(50% + 30px);
+  top: 29%;
+  transform: rotate(-120deg);
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1490196078);
+}
+
+.hour-hand {
+  width: 100%;
+  height: 100%;
+  transform: rotate(120deg);
+}
+
+.hour-hand:after {
+  content: "";
+  width: 12px;
+  height: 65px;
+  border-radius: 6px 6px 3px 3px;
+  background: orange;
+  position: absolute;
+  left: calc(50% - 4px);
+  top: 50%;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1490196078);
 }
 
 .numbers {
@@ -201,68 +260,6 @@ img {
   transform: rotate(-330deg);
 }
 
-#second {
-  width: 100%;
-  height: 100%;
-  animation: sec 60s steps(60, end) infinite;
-}
-
-#second:after {
-  content: "";
-  width: 4px;
-  /* height: 107px; */
-  height: 8vh;
-  border-radius: 2px;
-  /* background: red; */
-  background: ghostwhite;
-  position: absolute;
-  left: calc(50% - 2px);
-  top: 55px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1490196078);
-}
-
-#minute {
-  width: 100%;
-  height: 100%;
-  animation: sec 3600s steps(60, end) infinite;
-}
-
-#minute:after {
-  content: "";
-  width: 8px;
-  height: 79px;
-  border-radius: 4px 4px 2px 2px;
-  background: gray;
-  position: absolute;
-  left: calc(50% + 30px);
-  top: 29%;
-  transform: rotate(-120deg);
-  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1490196078);
-}
-
-#hour {
-  width: 100%;
-  height: 100%;
-  transform: rotate(120deg);
-}
-
-#hour:after {
-  content: "";
-  width: 12px;
-  height: 65px;
-  border-radius: 6px 6px 3px 3px;
-  background: orange;
-  position: absolute;
-  left: calc(50% - 4px);
-  top: 50%;
-  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1490196078);
-}
-
-@keyframes sec {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .opaque_blur {
   backdrop-filter: blur(21px);
 }
@@ -337,6 +334,7 @@ img {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: #323232;
   backdrop-filter: blur(21px);
   transition: transform ease 0.5s;
 }
@@ -412,24 +410,79 @@ img {
   overflow: hidden;
 }
 
-.day-month-text {
+.weekday-text {
   font-family: "Roboto Condensed";
-  font-size: 1.65em;
+  font-size: 2.1rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .weekday-text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .weekday-text {
+    font-size: 3.2rem;
+  }
 }
 
-.weekday-text {
+.day-text {
   font-family: "Arial";
-  font-size: 1.2em;
+  font-size: 1.2rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .day-text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .day-text {
+    font-size: 2.1rem;
+  }
+}
+
+.day-month-text {
+  font-family: "Arial";
+  font-size: 1.2rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .day-month-text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .day-month-text {
+    font-size: 2.1rem;
+  }
 }
 
 .city-text {
   font-family: "Roboto Condensed";
-  font-size: 1.65em;
+  font-size: 1.2rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .city-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .city-text {
+    font-size: 1.5rem;
+  }
 }
 
 .country-text {
   font-family: "Arial";
-  font-size: 1em;
+  font-size: 1.2rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .country-text {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .country-text {
+    font-size: 1.5rem;
+  }
 }
 
 .digital-time-group {
@@ -441,13 +494,37 @@ img {
 
 .digital-time-text {
   font-family: "Roboto Condensed";
-  font-size: 3.6em;
+  font-size: 2.1rem;
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+  .digital-time-text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-device-width: 768px) {
+  .digital-time-text {
+    font-size: 3.2rem;
+  }
 }
 
 .mock-clock-group {
   overflow: hidden;
   display: flex;
   justify-content: right;
+}
+
+.calender-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.digital-clock-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .app-container {
@@ -637,7 +714,7 @@ img {
   grid-area: profile;
 }
 
-.clock {
+.clock-area {
   grid-area: clock;
 }
 

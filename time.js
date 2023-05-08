@@ -45,40 +45,40 @@ const to_time_format = (time_obj) => {
 const to_day_month_format = (day, month) => {
     switch(month) {
         case 0:
-            return day + ' JAN, ';
+            return day + ' JAN';
             break;
         case 1:
-            return day + ' FEB, ';
+            return day + ' FEB';
             break;
         case 2:
-            return day + ' MAR, ';
+            return day + ' MAR';
             break;
         case 3:
-            return day + ' APR, ';
+            return day + ' APR';
             break;
         case 4:
-            return day + ' MAY, ';
+            return day + ' MAY';
             break;
         case 5:
-            return day + ' JUN, ';
+            return day + ' JUN';
             break;
         case 6:
-            return day + ' JUL, ';
+            return day + ' JUL';
             break;
         case 7:
-            return day + ' AUG, ';
+            return day + ' AUG';
             break;
         case 8:
-            return day + ' SEP, ';
+            return day + ' SEP';
             break;
         case 9:
-            return day + ' OCT, ';
+            return day + ' OCT';
             break;
         case 10:
-            return day + ' NOV, ';
+            return day + ' NOV';
             break;
         case 11:
-            return day + ' DEC, ';
+            return day + ' DEC';
             break;
         default:
             return 'UNKNOWN MONTH';
@@ -119,11 +119,14 @@ const to_day_format = (index) => {
 
 var bangkok_time = convert_utc_to_gmt(get_time_utc(), 7);
 
-const bangkok_day = to_day_format(bangkok_time.getDay());
-document.querySelector(".weekday-text").innerHTML = bangkok_day;
+const bangkok_weekday = to_day_format(bangkok_time.getDay());
+document.querySelector(".weekday-text").innerHTML = bangkok_weekday;
 
-const bangkok_date = to_day_month_format(bangkok_time.getDate(), bangkok_time.getMonth());
-document.querySelector(".day-month-text").innerHTML = bangkok_date;
+const bangkok_day = bangkok_time.getDate();
+// document.querySelector(".day-text").innerHTML = bangkok_day;
+
+const bangkok_day_month = to_day_month_format(bangkok_time.getDate(), bangkok_time.getMonth());
+document.querySelector(".day-month-text").innerHTML = bangkok_day_month;
 
 
 console.log(bangkok_time);

@@ -25,6 +25,7 @@
     -moz-box-shadow: vars.$box_shadow_level_2;
     box-shadow: vars.$box_shadow_level_2;
 
+    background-color: vars.$widget_bg_dark;
     backdrop-filter: vars.$opaque_blur;
 
     transition: transform ease 0.5s;
@@ -157,26 +158,66 @@
 .location-group {
     overflow: hidden;
 }
-.day-month-text {
-
-    font-family: 'Roboto Condensed';
-    font-size: 1.65em;
-}
 .weekday-text {
 
+    font-family: 'Roboto Condensed';
+    font-size: 2.1rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 1.8rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 3.2rem;
+    }
+}
+.day-text {
+
     font-family: 'Arial';
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 0.9rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 2.1rem;
+    }
+}
+.day-month-text {
+
+    font-family: 'Arial';
+    font-size: 1.2rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 0.9rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 2.1rem;
+    }
 }
 
 .city-text {
 
     font-family: 'Roboto Condensed';
-    font-size: 1.65em;
+    font-size: 1.2rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 0.8rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 1.5rem;
+    }
 }
 .country-text {
 
     font-family: 'Arial';
-    font-size: 1em;
+    font-size: 1.2rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 0.8rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 1.5rem;
+    }
 }
 
 .digital-time-group {
@@ -188,7 +229,14 @@
 }
 .digital-time-text {
     font-family: 'Roboto Condensed';
-    font-size: 3.6em;
+    font-size: 2.1rem;
+    
+    @media screen and (max-device-width: vars.$tablet_breakpoint) and (orientation: landscape) {
+        font-size: 1.8rem;
+    }
+    @media screen and (min-device-width: vars.$tablet_breakpoint) {
+        font-size: 3.2rem;
+    }
 }
 
 .mock-clock-group {
@@ -196,4 +244,17 @@
     overflow: hidden;
     display: flex;
     justify-content: right;
+}
+
+.calender-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.digital-clock-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
