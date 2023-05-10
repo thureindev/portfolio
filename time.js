@@ -1,4 +1,4 @@
-
+// This JS get's user's local time, convert it to utc and then convert to Bangkok time. 
 
 const get_time_utc = () => {
     /*** return current time in UTC */
@@ -45,43 +45,43 @@ const to_time_format = (time_obj) => {
 const to_day_month_format = (day, month) => {
     switch(month) {
         case 0:
-            return day + ' JAN';
+            return day + ' Jan';
             break;
         case 1:
-            return day + ' FEB';
+            return day + ' Feb';
             break;
         case 2:
-            return day + ' MAR';
+            return day + ' Mar';
             break;
         case 3:
-            return day + ' APR';
+            return day + ' Apr';
             break;
         case 4:
-            return day + ' MAY';
+            return day + ' May';
             break;
         case 5:
-            return day + ' JUN';
+            return day + ' Jun';
             break;
         case 6:
-            return day + ' JUL';
+            return day + ' Jul';
             break;
         case 7:
-            return day + ' AUG';
+            return day + ' Aug';
             break;
         case 8:
-            return day + ' SEP';
+            return day + ' Sep';
             break;
         case 9:
-            return day + ' OCT';
+            return day + ' Oct';
             break;
         case 10:
-            return day + ' NOV';
+            return day + ' Nov';
             break;
         case 11:
-            return day + ' DEC';
+            return day + ' Dec';
             break;
         default:
-            return 'UNKNOWN MONTH';
+            return 'ERROR';
             break;
     }
 }
@@ -89,45 +89,41 @@ const to_day_month_format = (day, month) => {
 const to_day_format = (index) => {
     switch(index) {
         case 0:
-            return 'Sun';
+            return 'SUN';
             break;
         case 1:
-            return 'Mon';
+            return 'MON';
             break;
         case 2:
-            return 'Tue';
+            return 'TUE';
             break;
         case 3:
-            return 'Wed';
+            return 'WED';
             break;
         case 4:
-            return 'Thu';
+            return 'THU';
             break;
         case 5:
-            return 'Fri';
+            return 'FRI';
             break;
         case 6:
-            return 'Sat';
+            return 'SAT';
             break;
         default:
-            return 'weekday';
+            return 'ERROR';
             break;
     }
 }
 
-
-
+// Assign to DOM elements
+// --------------------------------------
 var bangkok_time = convert_utc_to_gmt(get_time_utc(), 7);
 
 const bangkok_weekday = to_day_format(bangkok_time.getDay());
 document.querySelector(".weekday-text").innerHTML = bangkok_weekday;
 
-const bangkok_day = bangkok_time.getDate();
-// document.querySelector(".day-text").innerHTML = bangkok_day;
-
 const bangkok_day_month = to_day_month_format(bangkok_time.getDate(), bangkok_time.getMonth());
 document.querySelector(".day-month-text").innerHTML = bangkok_day_month;
-
 
 console.log(bangkok_time);
 
@@ -142,5 +138,6 @@ function writeTime() {
     bangkok_time.setSeconds(bangkok_time.getSeconds() + ONE_SEC_IN_MS)
 }
 
-// setInterval('writeTime()', 1000)
+writeTime();
+
 setInterval('writeTime()', 10000)
