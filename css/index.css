@@ -1,0 +1,202 @@
+/* Variables */
+/* IMAGES */
+/* COLORS */
+/* FONTS */
+/* LENGTH MEASUREMENTS */
+/* APP ICON MEASUREMENTS */
+@media screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  /* be careful with mobile landscape and tablet portrait here */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  color: ghostwhite;
+  font-size: 11pt;
+  font-family: Helvetica, Arial, sans-serif;
+  background: linear-gradient(145deg, rgb(79, 0, 107) 0%, rgb(124, 27, 187) 25%, rgb(127, 57, 212) 39%, rgb(0, 212, 255) 100%);
+  background-image: url("../images/chessboard002.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #414141;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  color: #414141;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 5px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main {
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #c8cccf;
+  border-radius: 22px;
+  padding: 30px 45px;
+  z-index: -2;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #c8cccf;
+  overflow: hidden;
+}
+.profile .profile-pic img {
+  width: 100%;
+  height: 100%;
+}
+.profile .profile-pic::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: #c8cccf;
+  z-index: -1;
+}
+.profile .profile-name {
+  margin: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.profile .profile-desc {
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+.social-links {
+  width: 100%;
+}
+.social-links ul li {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #c8cccf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-links ul li i {
+  position: relative;
+  top: 0px;
+  color: firebrick;
+  transition: top 0.5s ease, color 0.5s ease;
+}
+.social-links ul li:hover i {
+  top: -8px;
+  color: orangered;
+}
+.social-links .apps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  padding: 15px 0;
+  border: 1px solid firebrick;
+  border-radius: 12px;
+  background-color: #c8cccf;
+  font-size: 1.2em;
+  color: firebrick;
+  -webkit-transition: font-size 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  -moz-transition: font-size 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  -o-transition: font-size 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  transition: font-size 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+.social-links .apps-btn:hover {
+  font-size: 1.6em;
+  color: orangered;
+  border-color: orangered;
+}
+
+.contact-label {
+  margin-top: 22px;
+  padding: 5px 20px;
+  border-radius: 12px;
+  background-color: #c8cccf;
+}
+
+.contact-link {
+  margin-top: 16px;
+  font-size: 1.05em;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.contact-link:hover {
+  color: orangered;
+}
+
+footer {
+  margin-top: 10px;
+  color: #f9fcff;
+}
+
+/*# sourceMappingURL=index.css.map */
