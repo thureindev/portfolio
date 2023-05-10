@@ -67,9 +67,13 @@
 
     font-family: 'Roboto Condensed';
     font-size: 1.65em;
+
+    text-align: left;
 }
 .img-overlay-text .photo-date {
     display: block;
+    
+    text-align: left;
 }
 
 .profile-text-group {
@@ -87,15 +91,20 @@
 
     font-family: 'Roboto Condensed';
     font-size: 2.65rem;
+
+    text-align: left;
 }
 .profile-text-group .profile-subtitle {
     margin: 0 10px;
     font-size: 1.65rem;
     white-space: normal;
+    
+    text-align: left;
 }
 .profile-text-group .profile-description {
 
     white-space: normal;
+    text-align: left;
 }
 
 .date-location-group {

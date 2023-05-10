@@ -16,7 +16,8 @@ body {
     font-family: vars.$default_font_family;
 
     // background fallback color gradient
-    background: linear-gradient(145deg, rgba(79,0,107,1) 0%, rgba(124,27,187,1) 25%, rgba(127,57,212,1) 39%, rgba(0,212,255,1) 100%);
+    background-color: #414141;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     
     background-image: vars.$body_bg_img;
     background-repeat: no-repeat;
