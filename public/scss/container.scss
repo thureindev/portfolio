@@ -29,7 +29,7 @@
     border-bottom: vars.$hardware-border;
     border-radius: vars.$hardware-border-radius;
 
-    transform: rotate(4deg) translate(0px, 100px);
+    transform: rotate(4deg) translate(0px, 100px) skewX(-16deg);
 
 }
 .hardware-body-container.mobile {

@@ -48,7 +48,7 @@ body {
   border-right: 7px solid #67DFB1;
   border-bottom: 7px solid #67DFB1;
   border-radius: 48px;
-  transform: rotate(4deg) translate(0px, 100px);
+  transform: rotate(4deg) translate(0px, 100px) skewX(-16deg);
 }
 
 .screen-container {
