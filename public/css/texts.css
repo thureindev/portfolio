@@ -30,6 +30,10 @@ body {
   margin-left: 15px;
 }
 
+.info-text.normal {
+  font-family: "Belanosima", sans-serif;
+}
+
 .text-to-right {
   text-align: right;
   margin-left: 0;
