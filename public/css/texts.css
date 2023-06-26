@@ -33,6 +33,9 @@ body {
 .info-text.normal {
   font-family: "Belanosima", sans-serif;
 }
+.info-text.normal i {
+  color: yellow;
+}
 
 .text-to-right {
   text-align: right;
