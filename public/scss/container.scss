@@ -13,14 +13,30 @@
 
     height: 100%;
 
+    perspective: 1000px;
+
+    @media screen and (orientation: portrait) {
+
+        width: 100vw;
+        overflow-x: hidden;
+        
+        height: auto;
+        flex-direction: column;
+
+
+        // background-color: red;
+    }
+    // @media screen and (orientation: portrait) {
+    //     overflow-x: hidden;
+    // }
 }
 
+
 .hardware-body-container {
-    width: 375px;
-    height: 667px;
+    width: vars.$iPhone14-width;
+    height: vars.$iPhone14-height;
 
     @extend %flexbox;
-    justify-content: flex-start;
 
     background-color: vars.$hardware-outline-color;
 
@@ -29,9 +45,34 @@
     border-bottom: vars.$hardware-border;
     border-radius: vars.$hardware-border-radius;
 
-    transform: rotate(4deg) translate(0px, 100px) skewX(-16deg);
+    box-shadow: rgba(0, 0, 0, 0.15) 115px 65px 15px 0px;
 
+
+    transform: rotateY(-19deg) rotateX(21deg) rotateZ(4deg) translate(0px, 100px) skewX(-9deg);
+
+    @media screen and (orientation: portrait) {
+
+        transform-origin: center;
+        transform:rotateY(12deg) rotateX(7deg) rotateZ(-5deg) skewX(9deg);
+
+        @media (max-width: 480px) {
+
+            // transform: rotateY(-19deg) rotateX(-21deg) scale(0.95);
+            
+            transform:rotateY(12deg) rotateX(7deg) rotateZ(-5deg) skewX(7deg) scale(0.95);
+
+            width: vars.$iPhone5s-width;
+            height: vars.$iPhone5s-height;
+        }
+        
+        justify-content: flex-end;
+        align-items: flex-start;
+        box-shadow: rgba(0, 0, 0, 0.15) -65px 65px 15px 0px;
+        border-right: 0;
+        border-left: vars.$hardware-border;
+    }
 }
+
 .hardware-body-container.mobile {
     @extend %fillspace;
 }
@@ -39,16 +80,15 @@
 .screen-container {
     // @extend %flexbox;
     // flex-direction: column;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
 
-    width: calc(100% - 11px);
-    height: calc(100% - 11px);
 
-
-    background-color: beige;
-    
+    background-color: vars.$screen-bg-color;
     border: vars.$screen-border;
-    outline: vars.$screen-outline;
-    outline-offset: 0px;
+    padding: vars.$screen-padding;
+    // outline: vars.$screen-outline;
+    // outline-offset: 0px;
     border-radius: vars.$screen-border-radius;
 
     overflow: hidden;
@@ -63,6 +103,14 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    
+    @media screen and (orientation: portrait) {
+        margin-top: 90px;
+        margin-bottom: 80px;
+        p {
+            text-align: center;
+        }
+    }
 }
 
 .profile-img {

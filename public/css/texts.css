@@ -29,6 +29,11 @@ body {
   text-align: left;
   margin-left: 15px;
 }
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  .info-text {
+    font-size: large;
+  }
+}
 
 .info-text.normal {
   font-family: "Belanosima", sans-serif;
